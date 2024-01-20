@@ -20,7 +20,7 @@ jobs:
         url: https://ckan0.cf.opendata.inter.prod-toronto.ca/
         package_id: c4052ff7-a09d-4eaf-84e6-6669519f413d
         output_dir: data
-        resource_ids: '["f9f84603-973c-43eb-bed0-a0ec26a2652b"]'
+        resource_ids: '["05f7edf5-df38-4ca8-b46d-fcd40b10c0e6"]'
     - name: Push latest data
       run: |-
         git config user.name "github-actions[bot]"
