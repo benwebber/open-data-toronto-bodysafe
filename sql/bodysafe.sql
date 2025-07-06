@@ -86,7 +86,7 @@ SELECT
   cte.establishment_uid,
   inspection.id,
   CASE cte.type WHEN 'None' THEN '' ELSE cte.type END,
-  CASE cte.category WHEN 'None' THEN '' ELSE cte.description END,
+  CASE cte.category WHEN 'None' THEN '' ELSE cte.category END,
   CASE cte.description WHEN 'None' THEN '' ELSE cte.description END
 FROM
   cte
