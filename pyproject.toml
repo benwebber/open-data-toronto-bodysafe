@@ -1,0 +1,7 @@
+[project]
+name = "open-data-toronto-bodysafe"
+dynamic = ["version"]
+dependencies = [
+  "datasette",
+  "datasette-geojson-map",
+]

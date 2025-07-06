@@ -1,0 +1,13 @@
+title: BodySafe
+description: >
+  BodySafe is Toronto Public Health's safety program that inspects personal service settings (PSS) including hairstyling and barbering, tattooing, micropigmentation, ear and body piercing, injectable personal services, electrolysis, manicure, pedicure, and aesthetic services.
+license: Open Government Licence - Toronto
+license_url: https://open.toronto.ca/open-data-licence/
+source: BodySafe - City of Toronto Open Data Portal
+source_url: https://open.toronto.ca/dataset/bodysafe/
+about_url: https://github.com/benwebber/open-data-toronto-bodysafe/
+databases:
+  bodysafe:
+    tables:
+      sqlite_sequence:
+        hidden: true

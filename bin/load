@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+sqlite3 "${1:?db}" 'DROP TABLE IF EXISTS bodysafe; CREATE TABLE bodysafe (geometry, properties);'
+jq --compact-output --raw-output '.features[] | [(.geometry | tostring), (.properties | tostring)] | @csv' "${2:?data}" | sqlite3 -csv -cmd '.import /dev/stdin bodysafe' "${1}" .exit
