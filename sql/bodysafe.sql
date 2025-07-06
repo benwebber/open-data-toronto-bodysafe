@@ -56,6 +56,9 @@ GROUP BY
 HAVING
   MAX(date)
 ;
+CREATE INDEX idx_inspection_establishment_uid ON inspection (establishment_uid);
+CREATE INDEX idx_inspection_date ON inspection (date);
+CREATE INDEX idx_inspection_status ON inspection (status);
 
 DROP TABLE IF EXISTS infraction;
 CREATE TABLE infraction (
@@ -96,3 +99,7 @@ ON
   cte.establishment_uid = inspection.establishment_uid
   AND cte.inspection_date =  inspection.date
 ;
+CREATE INDEX idx_infraction_establishment_uid ON infraction (establishment_uid);
+CREATE INDEX idx_infraction_inspection_id ON infraction (inspection_id);
+CREATE INDEX idx_infraction_type ON infraction (type);
+CREATE INDEX idx_infraction_category ON infraction (category);
