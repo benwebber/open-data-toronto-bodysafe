@@ -7,7 +7,7 @@ $(DB): data.db sql/bodysafe.sql
 	sqlite3 -cmd "ATTACH '$<' AS data" $@ <sql/bodysafe.sql
 
 data.db: $(DATA)
-	./bin/load $@ data/bodysafe.geojson
+	./bin/load $@ data/bodysafe.geojsonl
 
 %.gz: $(DB)
 	gzip --force --keep --stdout $< >$@
