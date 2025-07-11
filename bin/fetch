@@ -2,4 +2,4 @@
 set -euo pipefail
 
 curl 'https://ckan0.cf.opendata.inter.prod-toronto.ca/dataset/c4052ff7-a09d-4eaf-84e6-6669519f413d/resource/9a9fbb34-308f-44d1-bc28-8db99eab8c77/download/bodysafe%20-%204326.geojson' \
-  | jq --compact-output --sort-keys '.features | sort_by(.estId, .date, .infCategory)[] | del(.properties._id)' >data/bodysafe.geojsonl
+  | jq --compact-output --sort-keys '.features | sort_by(.properties.estId, .properties.date, .properties.infCategory)[] | del(.properties._id)' >data/bodysafe.geojsonl
